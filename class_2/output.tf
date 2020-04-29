@@ -1,10 +1,4 @@
-resource "aws_instance" "web" {
-  ami           = "ami-0323c3dd2da7fb37d"
-  instance_type = "t2.micro"
-  tags = {
-    Name = "HelloWorld"
-  }
-}
+
 
 output "instance_id" {
   value = "${aws_instance.web.id}"
@@ -22,6 +16,17 @@ output "instance_az" {
   value = "${aws_instance.web.availability_zone}"
 }
 
+output "sec_group vpc_id" {
+  value = "${aws_security_group.allow_tls.vpc_id}"
+}
+
+output "sec_group description" {
+  value = "${aws_security_group.allow_tls.description}"
+}
+
+output "route53 fqdn" {
+  value = "${aws_route53_record.www.fqdn}"
+}
 
 
 

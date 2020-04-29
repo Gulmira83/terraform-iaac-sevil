@@ -24,7 +24,7 @@ resource "aws_instance" "web" {
      #! /bin/bash
      sudo yum install -y httpd
      sudo systemctl start httpd
-     sudo systemctl enable httpd
+     #sudo systemctl enable httpd
   EOF
 
 tags = {
@@ -69,12 +69,6 @@ resource "aws_volume_attachment" "web_data_vol_att" {
   
   
 #create road53 record ===================================================================================================================
-
-  resource "aws_route53_zone" "example-com" {
-    name = "sevilcankiroglu.com"
-  }
-
-
 
   resource "aws_route53_record" "www" {
     zone_id = "Z009097213R7B3H9ZE9ES"
