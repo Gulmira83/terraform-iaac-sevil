@@ -6,9 +6,12 @@ resource "aws_route_table" "route_table_private" {
     gateway_id = "${aws_internet_gateway.task3_IG.id}"
   }
 
-  tags = {
-    Name = "task3_RT_prvt"
-  } 
+  tags =  {
+           Environment = "Dev",
+           Department = "IT",
+           Team       ="infrastructure",
+           Created_by ="sevil"
+}
 }
 
 # Route Table association

@@ -9,12 +9,12 @@ resource "aws_instance" "task3" {
     Name = "task_3"
   } 
 
-# task3_tags =  {
-#            Environment = "Dev",
-#            Department = "IT",
-#            Team       ="infrastructure",
-#            Created_by ="sevil"
-# }
+tags =  {
+           Environment = "Dev",
+           Department = "IT",
+           Team       ="infrastructure",
+           Created_by ="sevil"
+}
 
 
 }
