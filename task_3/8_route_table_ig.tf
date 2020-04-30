@@ -6,12 +6,7 @@ resource "aws_route_table" "route_table" {
     gateway_id = "${aws_internet_gateway.task3_IG.id}"
   }
 
-  tags =  {
-           Environment = "Dev",
-           Department = "IT",
-           Team       ="infrastructure",
-           Created_by ="sevil"
-}
+  tags ="${var.tags}"
 }
 
 # Route Table association
