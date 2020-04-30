@@ -4,8 +4,7 @@ resource "aws_instance" "task3" {
   key_name = "${aws_key_pair.us-east-1-key_task2.key_name}"
   security_groups = ["${aws_security_group.allow_tls.name}"]
   user_data = "${file("11_user_data.sh")}"  
-   
- tags ="${var.tags}"
+  tags ="${var.tags}"
 
 }
 
