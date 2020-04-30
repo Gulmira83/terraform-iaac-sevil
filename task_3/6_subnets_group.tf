@@ -49,5 +49,5 @@ resource "aws_subnet" "task3_private3" {
     vpc_id     = "${aws_vpc.main.id}"
     cidr_block = "10.0.3.0/24"
 
-ttags ="${var.tags}"
+tags ="${var.tags}"
 }

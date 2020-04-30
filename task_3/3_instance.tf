@@ -5,11 +5,8 @@ resource "aws_instance" "task3" {
   security_groups = ["${aws_security_group.allow_tls.name}"]
   user_data = "${file("11_user_data.sh")}"  
    
-   tags = {
-    Name = "task_3"
-  } 
+ tags ="${var.tags}"
 
-tags ="${var.tags}"
 }
 
 
