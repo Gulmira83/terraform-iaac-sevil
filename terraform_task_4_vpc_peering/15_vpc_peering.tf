@@ -3,6 +3,7 @@
 #   profile = "${var.owner_profile}"
 #   region  = "${var.region}"
 # }
+
 #accepter profile 
 provider "aws" {
   alias = "accepter"
