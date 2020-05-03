@@ -1,5 +1,6 @@
 resource "aws_instance" "task4_db" {
-  ami = "ami-0db8e77c005d79e33" #ami for centos 6 in us-west-2
+  ami = "ami-01e36b7901e884a10" #ami for centos 7 in us-west-2
+  #ami = "ami-0db8e77c005d79e33" #ami for centos 6 in us-west-2
   instance_type ="t2.micro"
   key_name = "${aws_key_pair.bastion_key.key_name}"
   subnet_id = "${aws_subnet.task4_private1.id}"
