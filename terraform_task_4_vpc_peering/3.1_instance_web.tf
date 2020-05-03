@@ -3,7 +3,7 @@ resource "aws_instance" "task4_web" {
   instance_type ="t2.micro"
   key_name = "${aws_key_pair.bastion_key.key_name}"
   subnet_id = "${aws_subnet.task4_public1.id}"
-  availability_zone = "${var.region}${var.az2}"
+  availability_zone = "${var.region}${var.az1}"
   user_data = "${file("11_user_data_web.sh")}" 
   associate_public_ip_address = true
   source_dest_check = false 

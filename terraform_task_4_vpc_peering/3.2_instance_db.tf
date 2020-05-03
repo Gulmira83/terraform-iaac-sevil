@@ -4,7 +4,7 @@ resource "aws_instance" "task4_db" {
   instance_type ="t2.micro"
   key_name = "${aws_key_pair.bastion_key.key_name}"
   subnet_id = "${aws_subnet.task4_private1.id}"
-  availability_zone = "${var.region}${var.az2}" #how can we put selection????
+  availability_zone = "${var.region}${var.az1}" #how can we put selection????
   user_data = "${file("11.1_user_data_db.sh")}" 
   associate_public_ip_address = true
   source_dest_check = false 

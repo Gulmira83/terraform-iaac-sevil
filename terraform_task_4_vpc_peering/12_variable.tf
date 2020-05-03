@@ -3,6 +3,7 @@
 
 variable "vpc_cidr" {}
 variable "region" {}
+
 variable "key_name" {}
 
 variable "public_cidr1" {}
@@ -23,17 +24,12 @@ variable "tags" {
 
 
 
-#variables for vpc peering 
+# #variables for vpc peering 
 
-variable "owner_profile" {}
-
-variable "accepter_profile" {}
-
-
-variable "owner_vpc_id" {}
- 
-
-variable "accepter_vpc_id" {}
+# variable "owner_profile" {}
+# variable "accepter_profile" {}
+# variable "owner_vpc_id" {}
+#  variable "accepter_vpc_id" {}
 
 
 
