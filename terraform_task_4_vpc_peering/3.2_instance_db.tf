@@ -4,8 +4,8 @@ resource "aws_instance" "task4_db" {
   instance_type ="t2.micro"
   key_name = "${aws_key_pair.bastion_key.key_name}"
   subnet_id = "${aws_subnet.task4_private1.id}"
-  availability_zone = "${var.region}${var.az2}"
-  user_data = "${file("11_user_data_db.sh")}" 
+  availability_zone = "${var.region}${var.az1}"
+  user_data = "${file("11.1_user_data_db.sh")}" 
   associate_public_ip_address = true
   source_dest_check = false 
   vpc_security_group_ids = ["${aws_security_group.allow_tls_TASK4_db.id}"]  
@@ -13,7 +13,7 @@ resource "aws_instance" "task4_db" {
   #tags ="${var.tags}"
 
 tags = {
-    Name = "task4_Web"
+    Name = "task4_DB"
   }
 
 }
