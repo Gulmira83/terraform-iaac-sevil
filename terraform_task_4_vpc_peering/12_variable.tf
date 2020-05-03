@@ -17,12 +17,28 @@ variable "private_cidr1" {}
 variable "private_cidr2" {}
 variable "private_cidr3" {}
 
-
-
-
-
-
 variable "tags" {
  type = "map"
 } 
+
+
+
+#variables for vpc peering 
+
+variable "owner_profile" {}
+
+variable "accepter_profile" {}
+
+
+variable "owner_vpc_id" {}
+ 
+
+variable "accepter_vpc_id" {}
+
+
+
+
+
+
+
 
