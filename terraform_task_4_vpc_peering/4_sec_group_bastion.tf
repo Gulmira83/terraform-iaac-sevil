@@ -12,15 +12,7 @@ resource "aws_security_group" "allow_tls_TASK4" {
     cidr_blocks = ["0.0.0.0/0"]
   }
  
- ingress {   #inbound rule HTTP
-    description = "TLS from VPC"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  } 
-
-  
+ 
   egress {    #outbond rule
     from_port   = 0
     to_port     = 0
