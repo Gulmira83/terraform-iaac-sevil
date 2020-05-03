@@ -21,7 +21,7 @@
 
 
  output "vpc_cidr_block "{
-     value = "${aws_vpc.task4_vpc.cidr_block}"
+     value = "${aws_vpc.task4_vpc.id}"
  }
 
 # output "public_subnet "{
